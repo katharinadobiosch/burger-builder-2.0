@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-import styles from "./burgerCreator.css";
+import "./burgerCreator.css";
 
 import BurgerTop from "../BurgerTop/index";
 import BurgerBottom from "../BurgerBottom/index";
 
-import Button from "../UI/Button";
-import Tomato from ".././components/Fillings/Tomato";
-import Lettuce from ".././components/Fillings/Lettuce";
-import Cheese from ".././components/Fillings/Cheese";
-import Meat from ".././components/Fillings/Meat";
-import Mustard from ".././components/Fillings/Mustard";
-import Ketchup from ".././components/Fillings/Ketchup";
+import Button from "../Button/index";
+import Tomato from "../Tomato/index";
+import Lettuce from "../Lettuce/index";
+import Cheese from "../Cheese/index";
+import Meat from "../Meat/index";
+import Mustard from "../Mustard/index";
+import Ketchup from "../Ketchup/index";
 
 const BurgerCreator = (props) => {
     const [addTomato, setAddTomato] = useState([]);
@@ -125,39 +125,39 @@ const BurgerCreator = (props) => {
 
     return (
         <>
-            <div className={styles.flex_container}>
-                <div className={styles.flex_item}>
+            <div className="flex_container">
+                <div className="flex_item">
                     <h1>Now, let's start...</h1>
                 </div>
                 <BurgerTop />
 
                 {/* #1 */}
-                {/* <div className={styles.flex_item}>{tomatoCount}</div> */}
+                {/* <div className="flex_item">{tomatoCount}</div> */}
 
                 {/* #2 */}
-                <div className={styles.flex_item}>{addTomato}</div>
-                <div className={styles.flex_item}>{addLettuce}</div>
-                <div className={styles.flex_item}>{addCheese}</div>
-                <div className={styles.flex_item}>{addMeat}</div>
-                <div className={styles.flex_item}>{addMustard}</div>
-                <div className={styles.flex_item}>{addKetchup}</div>
+                <div className="flex_item">{addTomato}</div>
+                <div className="flex_item">{addLettuce}</div>
+                <div className="flex_item">{addCheese}</div>
+                <div className="flex_item">{addMeat}</div>
+                <div className="flex_item">{addMustard}</div>
+                <div className="flex_item">{addKetchup}</div>
 
                 <BurgerBottom />
 
-                <div className={styles.flex_container}>
-                    <form className={styles.form}>
-                        <div className={styles.flex_container}>
+                <div className="flex_container">
+                    <form className="form">
+                        <div className="flex_container">
                             <label>TOMATO</label>
                             <div>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={addTomatoHandler}
                                 >
                                     +
                                 </button>
 
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={removeTomatoHandler}
                                 >
                                     -
@@ -165,17 +165,17 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className={styles.flex_container}>
+                        <div className="flex_container">
                             <label>LETTUCE</label>
                             <div>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={addLettuceHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={removeLettuceHandler}
                                 >
                                     -
@@ -183,17 +183,17 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className={styles.flex_container}>
+                        <div className="flex_container">
                             <label>CHEESE</label>
                             <div>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={addCheeseHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={removeCheeseHandler}
                                 >
                                     -
@@ -201,17 +201,17 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className={styles.flex_container}>
+                        <div className="flex_container">
                             <label>MEAT</label>
                             <div>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={addMeatHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={removeMeatHandler}
                                 >
                                     -
@@ -219,17 +219,17 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className={styles.flex_container}>
+                        <div className="flex_container">
                             <label>MUSTARD</label>
                             <div>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={addMustardHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={removeMustardHandler}
                                 >
                                     -
@@ -237,17 +237,17 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className={styles.flex_container}>
+                        <div className="flex_container">
                             <label>KETCHUP</label>
                             <div>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={addKetchupHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className={styles.add_rmv_btn}
+                                    className="add_rmv_btn"
                                     onClick={removeKetchupHandler}
                                 >
                                     -
@@ -257,9 +257,9 @@ const BurgerCreator = (props) => {
                     </form>
                 </div>
                 <div>
-                    <Link to="/OrderForm">
+                    {/* <Link to="/OrderForm">
                         <Button>ORDER</Button>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </>

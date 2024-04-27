@@ -1,4 +1,4 @@
-.flex_container {
+.burger-creator__ingredient-wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -7,16 +7,13 @@
     align-items: center;
 }
 
-.flex_item {
+.burger-creator__ingredient {
     order: 0;
     flex: 0 1 auto;
     align-self: center;
 }
 
-.img {
-    width: 50vw;
-    /* margin: 0.1%; */
-}
+
 .add_rmv_btn {
     font-family: sans-serif;
     font-weight: bold;
@@ -59,7 +56,5 @@
     padding-right: 5em;
     padding-top: 1em;
 
-
-    
     max-width: 50em;
 }

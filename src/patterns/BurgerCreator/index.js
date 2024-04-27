@@ -5,8 +5,6 @@ import "./burgerCreator.css";
 
 import BurgerTop from "../BurgerTop/index";
 import BurgerBottom from "../BurgerBottom/index";
-
-import Button from "../Button/index";
 import Tomato from "../Tomato/index";
 import Lettuce from "../Lettuce/index";
 import Cheese from "../Cheese/index";
@@ -14,7 +12,7 @@ import Meat from "../Meat/index";
 import Mustard from "../Mustard/index";
 import Ketchup from "../Ketchup/index";
 
-const BurgerCreator = (props) => {
+const BurgerCreator = () => {
     const [addTomato, setAddTomato] = useState([]);
     const [addLettuce, setAddLettuce] = useState([]);
     const [addCheese, setAddCheese] = useState([]);
@@ -22,23 +20,6 @@ const BurgerCreator = (props) => {
     const [addMustard, setAddMustard] = useState([]);
     const [addKetchup, setAddKetchup] = useState([]);
 
-    // const [tomatoCount, setTomatoCount] = useState(0);
-    // const [lettuceCount, setLettuceCount] = useState(0);
-    // const [cheeseCount, setCheeseCount] = useState(0);
-    // const [meatCount, setAMeatCount] = useState(0);
-    // const [mustardCount, setMustardCount] = useState(0);
-    // const [ketchupCount, setKetchupCount] = useState(0);
-
-    // // # 1
-    // const addTomatoHandler = (event) => {
-    //     event.preventDefault();
-
-    //     setTomatoCount(tomatoCount + 1);
-
-    //     // [...Array(tomatoCount)].map((unused, index) => <Tomato key={index} />);
-    // };
-
-    // #2
     const addTomatoHandler = (event) => {
         event.preventDefault();
         const addExtraTomato = [...addTomato, <Tomato />];
@@ -48,7 +29,7 @@ const BurgerCreator = (props) => {
     const removeTomatoHandler = (event) => {
         event.preventDefault();
         const removeExtraTomato = addTomato.filter(
-            (unused, index) => index < addTomato.length - 1
+            (_, index) => index < addTomato.length - 1
         );
         setAddTomato(removeExtraTomato);
     };
@@ -62,7 +43,7 @@ const BurgerCreator = (props) => {
     const removeLettuceHandler = (event) => {
         event.preventDefault();
         const removeExtraLettuce = addLettuce.filter(
-            (unused, index) => index < addLettuce.length - 1
+            (_, index) => index < addLettuce.length - 1
         );
         setAddLettuce(removeExtraLettuce);
     };
@@ -76,7 +57,7 @@ const BurgerCreator = (props) => {
     const removeCheeseHandler = (event) => {
         event.preventDefault();
         const removeExtraCheese = addCheese.filter(
-            (unused, index) => index < addCheese.length - 1
+            (_, index) => index < addCheese.length - 1
         );
         setAddCheese(removeExtraCheese);
     };
@@ -90,7 +71,7 @@ const BurgerCreator = (props) => {
     const removeMeatHandler = (event) => {
         event.preventDefault();
         const removeExtraMeat = addMeat.filter(
-            (unused, index) => index < addMeat.length - 1
+            (_, index) => index < addMeat.length - 1
         );
         setAddMeat(removeExtraMeat);
     };
@@ -104,7 +85,7 @@ const BurgerCreator = (props) => {
     const removeMustardHandler = (event) => {
         event.preventDefault();
         const removeExtraMustard = addMustard.filter(
-            (unused, index) => index < addMustard.length - 1
+            (_, index) => index < addMustard.length - 1
         );
         setAddMustard(removeExtraMustard);
     };
@@ -118,35 +99,32 @@ const BurgerCreator = (props) => {
     const removeKetchupHandler = (event) => {
         event.preventDefault();
         const removeExtraKetchup = addKetchup.filter(
-            (unused, index) => index < addKetchup.length - 1
+            (_, index) => index < addKetchup.length - 1
         );
         setAddKetchup(removeExtraKetchup);
     };
 
     return (
         <>
-            <div className="flex_container">
-                <div className="flex_item">
+            <div className="burger-creator__ingredient-wrapper">
+                <div className="burger-creator__ingredient">
                     <h1>Now, let's start...</h1>
                 </div>
                 <BurgerTop />
 
-                {/* #1 */}
-                {/* <div className="flex_item">{tomatoCount}</div> */}
-
-                {/* #2 */}
-                <div className="flex_item">{addTomato}</div>
-                <div className="flex_item">{addLettuce}</div>
-                <div className="flex_item">{addCheese}</div>
-                <div className="flex_item">{addMeat}</div>
-                <div className="flex_item">{addMustard}</div>
-                <div className="flex_item">{addKetchup}</div>
+       
+                <div className="burger-creator__ingredient">{addTomato}</div>
+                <div className="burger-creator__ingredient">{addLettuce}</div>
+                <div className="burger-creator__ingredient">{addCheese}</div>
+                <div className="burger-creator__ingredient">{addMeat}</div>
+                <div className="burger-creator__ingredient">{addMustard}</div>
+                <div className="burger-creator__ingredient">{addKetchup}</div>
 
                 <BurgerBottom />
 
-                <div className="flex_container">
+                <div className="burger-creator__ingredient-wrapper">
                     <form className="form">
-                        <div className="flex_container">
+                        <div className="burger-creator__ingredient-wrapper">
                             <label>TOMATO</label>
                             <div>
                                 <button
@@ -165,7 +143,7 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className="flex_container">
+                        <div className="burger-creator__ingredient-wrapper">
                             <label>LETTUCE</label>
                             <div>
                                 <button
@@ -183,7 +161,7 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className="flex_container">
+                        <div className="burger-creator__ingredient-wrapper">
                             <label>CHEESE</label>
                             <div>
                                 <button
@@ -201,7 +179,7 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className="flex_container">
+                        <div className="burger-creator__ingredient-wrapper">
                             <label>MEAT</label>
                             <div>
                                 <button
@@ -219,7 +197,7 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className="flex_container">
+                        <div className="burger-creator__ingredient-wrapper">
                             <label>MUSTARD</label>
                             <div>
                                 <button
@@ -237,7 +215,7 @@ const BurgerCreator = (props) => {
                             </div>
                         </div>
 
-                        <div className="flex_container">
+                        <div className="burger-creator__ingredient-wrapper">
                             <label>KETCHUP</label>
                             <div>
                                 <button

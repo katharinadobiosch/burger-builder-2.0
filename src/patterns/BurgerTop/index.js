@@ -5,9 +5,9 @@ import "./burgerTop.css";
 const BurgerTop = () => {
     return (
         <>
-            <div className="flex_item">
+            <div className="burger-top">
                 <img
-                    className="img"
+                    className="burger-top__img"
                     src={BurgerTopImg}
                     alt="Burger bun top"
                 />

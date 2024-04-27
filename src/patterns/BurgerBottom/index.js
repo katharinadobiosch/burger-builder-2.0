@@ -5,9 +5,9 @@ import "./burgerBottom.css";
 const BurgerBottom = () => {
     return (
         <>
-            <div className="flex_item">
+            <div className="burger-bottom__wrapper">
                 <img
-                    className="img"
+                    className="burger-bottom__img"
                     src={BurgerBottomImg}
                     alt="Burger bun bottom"
                 />

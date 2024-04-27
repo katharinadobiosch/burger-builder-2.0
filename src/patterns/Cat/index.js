@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 import Button from "../Button";
 
-function Cat(props) {
+function Cat() {
     return (
         <div className="landingpage">
             <h1>Are you hungry?</h1>
             <img src={HungryCat} alt="hungry cat" />
             <Link to="/burger-creator">
-                <Button>MEOW</Button>
+                <Button text="MEOW"/>
             </Link>{" "}
         </div>
     );

@@ -1,3 +1,16 @@
+.burger-creator__ingredients-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.burger-creator__title {
+    /* border: 2px solid red; */
+    padding-bottom: 2rem;
+}
+
 .burger-creator__ingredient-wrapper {
     display: flex;
     flex-direction: column;
@@ -13,19 +26,15 @@
     align-self: center;
 }
 
+.burger-creator__button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em 1.5em 0em 1.5em;
+}
 
-.burger-creator__button {
-    font-family: sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    width: 2.5rem;
-    border: 3.5px solid #d8d8d8;
-    background-color: lightgray;
-    color: #ffffff;
-    margin-bottom: 1.5em;
-    margin-top: 0.5em;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
+/*.burger-creator__button-wrapper {
+    display: flex;
+    margin: 10px;
 }
 
 .burger-creator__button:hover,
@@ -43,15 +52,9 @@
 .burger-creator__button.alternative:hover,
 .burger-creator__button.alternative:active {
     background-color: #ddb3f8;
-}
+} */
 
-.form {
+.burger-creator__form {
     display: flex;
-    flex-direction: column;
-    margin: 2em 0.5em 0em 0.5em;
-    padding: 0.5em;
-    padding-left: 5em;
-    padding-right: 5em;
-    padding-top: 1em;
-    max-width: 50em;
+    padding: 1em 5em 2.5em 5em;
 }

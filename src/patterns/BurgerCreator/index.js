@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./burgerCreator.css";
 
@@ -11,6 +11,7 @@ import Cheese from "../Cheese/index";
 import Meat from "../Meat/index";
 import Mustard from "../Mustard/index";
 import Ketchup from "../Ketchup/index";
+import Button from "../Button/index";
 
 const BurgerCreator = () => {
     const [addTomato, setAddTomato] = useState([]);
@@ -107,8 +108,111 @@ const BurgerCreator = () => {
     return (
         <>
             <div className="burger-creator__ingredient-wrapper">
-                <div className="burger-creator__ingredient">
+                <div className="burger-creator__title">
                     <h1>What do you fancy?</h1>
+                </div>
+                <div className="burger-creator__ingredients-wrapper">
+                    <form className="burger-creator__form">
+                        <div className="burger-creator__ingredient-wrapper">
+                            <label>TOMATO</label>
+                            <div className="burger-creator__button-wrapper">
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={addTomatoHandler}
+                                    text="+"
+                                />
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={removeTomatoHandler}
+                                    text="-"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="burger-creator__ingredient-wrapper">
+                            <label>LETTUCE</label>
+                            <div className="burger-creator__button-wrapper">
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={addLettuceHandler}
+                                    text="+"
+                                />
+
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={removeLettuceHandler}
+                                    text="-"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="burger-creator__ingredient-wrapper">
+                            <label>CHEESE</label>
+                            <div className="burger-creator__button-wrapper">
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={addCheeseHandler}
+                                    text="+"
+                                />
+
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={removeCheeseHandler}
+                                    text="-"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="burger-creator__ingredient-wrapper">
+                            <label>MEAT</label>
+                            <div className="burger-creator__button-wrapper">
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={addMeatHandler}
+                                    text="+"
+                                />
+
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={removeMeatHandler}
+                                    text="-"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="burger-creator__ingredient-wrapper">
+                            <label>MUSTARD</label>
+                            <div className="burger-creator__button-wrapper">
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={addMustardHandler}
+                                    text="+"
+                                />
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={removeMustardHandler}
+                                    text="-"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="burger-creator__ingredient-wrapper">
+                            <label>KETCHUP</label>
+                            <div className="burger-creator__button-wrapper">
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={addKetchupHandler}
+                                    text="+"
+                                />
+
+                                <Button
+                                    className="burger-creator__button"
+                                    onClick={removeKetchupHandler}
+                                    text="-"
+                                />
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <BurgerTop />
 
@@ -121,122 +225,10 @@ const BurgerCreator = () => {
 
                 <BurgerBottom />
 
-                <div className="burger-creator__ingredient-wrapper">
-                    <form className="form">
-                        <div className="burger-creator__ingredient-wrapper">
-                            <label>TOMATO</label>
-                            <div>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={addTomatoHandler}
-                                >
-                                    +
-                                </button>
-
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={removeTomatoHandler}
-                                >
-                                    -
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="burger-creator__ingredient-wrapper">
-                            <label>LETTUCE</label>
-                            <div>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={addLettuceHandler}
-                                >
-                                    +
-                                </button>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={removeLettuceHandler}
-                                >
-                                    -
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="burger-creator__ingredient-wrapper">
-                            <label>CHEESE</label>
-                            <div>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={addCheeseHandler}
-                                >
-                                    +
-                                </button>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={removeCheeseHandler}
-                                >
-                                    -
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="burger-creator__ingredient-wrapper">
-                            <label>MEAT</label>
-                            <div>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={addMeatHandler}
-                                >
-                                    +
-                                </button>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={removeMeatHandler}
-                                >
-                                    -
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="burger-creator__ingredient-wrapper">
-                            <label>MUSTARD</label>
-                            <div>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={addMustardHandler}
-                                >
-                                    +
-                                </button>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={removeMustardHandler}
-                                >
-                                    -
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="burger-creator__ingredient-wrapper">
-                            <label>KETCHUP</label>
-                            <div>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={addKetchupHandler}
-                                >
-                                    +
-                                </button>
-                                <button
-                                    className="burger-creator__button"
-                                    onClick={removeKetchupHandler}
-                                >
-                                    -
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
                 <div>
-                    {/* <Link to="/OrderForm">
-                        <Button>ORDER</Button>
-                    </Link> */}
+                    <Link to="/order-form">
+                        <Button text="ORDER" />
+                    </Link>
                 </div>
             </div>
         </>
@@ -244,3 +236,12 @@ const BurgerCreator = () => {
 };
 
 export default BurgerCreator;
+
+//q: the function of the button component is to add or remove ingredients from the burger, but it doesnt work anymore
+//q: the button component is not working anymore, what is the problem?
+//q: the button component is not working anymore, what is the problem?
+//a: the button component is not working anymore because the onClick event is not being passed down to the button component
+//q: how to do it?
+//a: pass the onClick event to the button component
+//q: show me please
+//a

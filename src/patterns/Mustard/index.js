@@ -5,8 +5,8 @@ import "./mustard.css";
 const Mustard = () => {
     return (
         <>
-            <div className="flex_item">
-                <img className="img" src={MustardImg} alt="Mustard" />
+            <div className="mustard__wrapper">
+                <img className="mustard__img" src={MustardImg} alt="Mustard" />
             </div>
         </>
     );

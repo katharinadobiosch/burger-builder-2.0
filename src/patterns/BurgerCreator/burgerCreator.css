@@ -14,12 +14,10 @@
 }
 
 
-.add_rmv_btn {
+.burger-creator__button {
     font-family: sans-serif;
     font-weight: bold;
-    /* font: inherit; */
     cursor: pointer;
-    /* padding: 0.25rem 1rem; */
     width: 2.5rem;
     border: 3.5px solid #d8d8d8;
     background-color: lightgray;
@@ -30,20 +28,20 @@
     margin-right: 0.25em;
 }
 
-.add_rmv_btn:hover,
-.add_rmv_btn:active {
+.burger-creator__button:hover,
+.burger-creator__button:active {
     background-color: lightgray;
     border-color: yellow;
 }
 
-.add_rmv_btn.alternative {
+.burger-creator__button.alternative {
     color: #220131;
     border-color: transparent;
     background-color: transparent;
 }
 
-.add_rmv_btn.alternative:hover,
-.add_rmv_btn.alternative:active {
+.burger-creator__button.alternative:hover,
+.burger-creator__button.alternative:active {
     background-color: #ddb3f8;
 }
 
@@ -55,6 +53,5 @@
     padding-left: 5em;
     padding-right: 5em;
     padding-top: 1em;
-
     max-width: 50em;
 }

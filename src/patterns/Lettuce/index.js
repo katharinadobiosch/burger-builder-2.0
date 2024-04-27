@@ -5,8 +5,8 @@ import "./lettuce.css";
 const Lettuce = () => {
     return (
         <>
-            <div className="flex_item">
-                <img className="img" src={LettuceImg} alt="Lettuce" />
+            <div className="lettuce__wrapper">
+                <img className="lettuce__img" src={LettuceImg} alt="Lettuce" />
             </div>
         </>
     );

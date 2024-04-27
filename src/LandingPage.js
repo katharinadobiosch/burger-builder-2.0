@@ -6,12 +6,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
     return (
         <>
-            <Router >
+            <Router>
                 <div className="site-wrapper">
                     <main>
-                        <Cat />
                         <Routes>
-                            <Route exact path="/burger-creator" element={<BurgerCreator />} />
+                            <Route exact path="/" element={<Cat />} />
+
+                            <Route
+                                exact
+                                path="/burger-creator"
+                                element={<BurgerCreator />}
+                            />
                         </Routes>
                     </main>
                 </div>

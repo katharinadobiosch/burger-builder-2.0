@@ -5,8 +5,8 @@ import "./ketchup.css";
 const Ketchup = () => {
     return (
         <>
-            <div className="flex_item">
-                <img className="img" src={KetchupImg} alt="Ketchup" />
+            <div className="ketchup__wrapper">
+                <img className="ketchup__img" src={KetchupImg} alt="Ketchup" />
             </div>
         </>
     );

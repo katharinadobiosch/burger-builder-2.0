@@ -108,11 +108,10 @@ const BurgerCreator = () => {
         <>
             <div className="burger-creator__ingredient-wrapper">
                 <div className="burger-creator__ingredient">
-                    <h1>Now, let's start...</h1>
+                    <h1>What do you fancy?</h1>
                 </div>
                 <BurgerTop />
 
-       
                 <div className="burger-creator__ingredient">{addTomato}</div>
                 <div className="burger-creator__ingredient">{addLettuce}</div>
                 <div className="burger-creator__ingredient">{addCheese}</div>
@@ -128,14 +127,14 @@ const BurgerCreator = () => {
                             <label>TOMATO</label>
                             <div>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={addTomatoHandler}
                                 >
                                     +
                                 </button>
 
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={removeTomatoHandler}
                                 >
                                     -
@@ -147,13 +146,13 @@ const BurgerCreator = () => {
                             <label>LETTUCE</label>
                             <div>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={addLettuceHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={removeLettuceHandler}
                                 >
                                     -
@@ -165,13 +164,13 @@ const BurgerCreator = () => {
                             <label>CHEESE</label>
                             <div>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={addCheeseHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={removeCheeseHandler}
                                 >
                                     -
@@ -183,13 +182,13 @@ const BurgerCreator = () => {
                             <label>MEAT</label>
                             <div>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={addMeatHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={removeMeatHandler}
                                 >
                                     -
@@ -201,13 +200,13 @@ const BurgerCreator = () => {
                             <label>MUSTARD</label>
                             <div>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={addMustardHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={removeMustardHandler}
                                 >
                                     -
@@ -219,13 +218,13 @@ const BurgerCreator = () => {
                             <label>KETCHUP</label>
                             <div>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={addKetchupHandler}
                                 >
                                     +
                                 </button>
                                 <button
-                                    className="add_rmv_btn"
+                                    className="burger-creator__button"
                                     onClick={removeKetchupHandler}
                                 >
                                     -

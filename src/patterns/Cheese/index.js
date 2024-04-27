@@ -5,8 +5,8 @@ import "./cheese.css";
 const Cheese = () => {
     return (
         <>
-            <div className="flex_item">
-                <img className="img" src={CheeseImg} alt="Cheese" />
+            <div className="cheese__wrapper">
+                <img className="cheese__img" src={CheeseImg} alt="Cheese" />
             </div>
         </>
     );

@@ -5,8 +5,8 @@ import "./tomato.css";
 const Tomato = () => {
     return (
         <>
-            <div className="flex_item">
-                <img className="img" src={TomatoImg} alt="Burger bun top" />
+            <div className="tomato__wrapper">
+                <img className="tomato__img" src={TomatoImg} alt="Burger bun top" />
             </div>
         </>
     );

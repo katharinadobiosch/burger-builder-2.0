@@ -14,10 +14,9 @@ html {
     position: relative;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 main {
     margin-top: 2rem;
     padding: 0 16px;
-    flex-grow: 2;
 }

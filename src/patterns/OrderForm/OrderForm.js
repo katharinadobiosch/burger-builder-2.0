@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Button from "../Button/index";
 import "./orderForm.css";
 
 const OrderForm = (props) => {
+    const navigate = useNavigate();
+
     const [enteredFirstName, setEnteredFirstName] = useState("");
     const [enteredLastName, setEnteredLastName] = useState("");
     const [enteredPhone, setEnteredPhone] = useState("");
@@ -245,7 +248,9 @@ const OrderForm = (props) => {
     const addOrderHandler = (event) => {
         event.preventDefault();
 
-        props.history.push({ pathname: "/order-overview", state });
+        console.log("Data to be passed to OrderOverview:", state); // Add this console log
+
+        navigate("/order-overview", { state });
         console.log("button was clicked");
 
         resetErrorDivs();
@@ -264,6 +269,23 @@ const OrderForm = (props) => {
             setEnteredComment("");
         }
     };
+
+    const handleOrderPlacement = () => {
+        navigate("/order-overview", {
+            state: {
+                firstName: enteredFirstName,
+                lastName: enteredLastName,
+                phone: enteredPhone,
+                email: enteredEmail,
+                street: enteredStreet,
+                number: enteredNumber,
+                city: enteredCity,
+                zipCode: enteredZip,
+                comments: enteredComment,
+            },
+        });
+    };
+
 
     return (
         <>
@@ -423,9 +445,29 @@ const OrderForm = (props) => {
                 </div>
 
                 <div>
-                    <Link to="/order-overview">
+                    <Button text="PLACE ORDER" onClick={handleOrderPlacement} />
+
+                    {/* <Link
+                        to={{
+                            pathname: "/order-overview",
+                            state: {
+                                firstName: enteredFirstName,
+                                lastName: enteredLastName,
+                                phone: enteredPhone,
+                                email: enteredEmail,
+                                street: enteredStreet,
+                                number: enteredNumber,
+                                city: enteredCity,
+                                zipCode: enteredZip,
+                                comments: enteredComment,
+                            },
+                        }}
+                        onClick={() =>
+                            console.log("State passed to OrderOverview:", state)
+                        } // Add this console log
+                    >
                         <Button text="PLACE ORDER" />
-                    </Link>
+                    </Link> */}
                 </div>
             </form>
         </>

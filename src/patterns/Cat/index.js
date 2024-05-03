@@ -8,7 +8,7 @@ function Cat() {
     return (
         <div className="landingpage">
             <h1>Are you hungry?</h1>
-            <img src={HungryCat} alt="hungry cat" />
+            <img src={HungryCat} alt="hungry cat" className="landingpage__img" />
             <Link to="/burger-creator">
                 <Button text="MEOW"/>
             </Link>{" "}

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../Button/index";
@@ -286,7 +285,6 @@ const OrderForm = (props) => {
         });
     };
 
-
     return (
         <>
             {/* HEADING */}
@@ -439,35 +437,13 @@ const OrderForm = (props) => {
                             onBlur={checkErrorOnBlur}
                             onChange={userDataChangeHandler}
                             className={`$"input" $"textarea"`}
-                            placeholder="&ldquo;I'd love to eat burger all day long&rdquo; - Roman   Jasiek, 2021"
+                            placeholder="&ldquo;I'd love to eat burger all day long&rdquo;"
                         ></textarea>
                     </div>
                 </div>
 
                 <div>
                     <Button text="PLACE ORDER" onClick={handleOrderPlacement} />
-
-                    {/* <Link
-                        to={{
-                            pathname: "/order-overview",
-                            state: {
-                                firstName: enteredFirstName,
-                                lastName: enteredLastName,
-                                phone: enteredPhone,
-                                email: enteredEmail,
-                                street: enteredStreet,
-                                number: enteredNumber,
-                                city: enteredCity,
-                                zipCode: enteredZip,
-                                comments: enteredComment,
-                            },
-                        }}
-                        onClick={() =>
-                            console.log("State passed to OrderOverview:", state)
-                        } // Add this console log
-                    >
-                        <Button text="PLACE ORDER" />
-                    </Link> */}
                 </div>
             </form>
         </>

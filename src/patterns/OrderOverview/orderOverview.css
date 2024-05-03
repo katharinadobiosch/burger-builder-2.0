@@ -1,4 +1,4 @@
-.flex_container {
+.order-overview__wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -6,6 +6,12 @@
     align-content: center;
     align-items: center;
     min-height: 60vh;
+    padding-bottom: 1.3rem;
+}
+
+.order-overview__order-details {
+        padding-bottom: 1.3rem;
+
 }
 
 .flex_item {

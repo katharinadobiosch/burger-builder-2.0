@@ -1,3 +1,7 @@
+.burger-bottom__wrapper {
+    padding-bottom: 1.3rem;
+}
+
 .burger-bottom__img {
     width: 50vw;
     /* margin: 0.1%; */

@@ -8,9 +8,6 @@ html {
     background: yellow;
     max-width: 100vw;
     margin: 0 auto;
-    /* color: var(--neutral-90); */
-    /* font-family: var(--font-family-regular); */
-    /* font-size: var(--font-size-base); */
     position: relative;
     min-height: 100vh;
     display: flex;

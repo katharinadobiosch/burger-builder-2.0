@@ -1,6 +1,8 @@
+import "./ThankYou.css";
+
 function ThankYou() {
     return (
-        <div>
+        <div className="thank-you">
             <h1>Thank you for your purchase!</h1>
         </div>
     );

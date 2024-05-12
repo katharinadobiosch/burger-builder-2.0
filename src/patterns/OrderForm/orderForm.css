@@ -9,11 +9,9 @@
             45deg,
             yellow 0,
             yellow 1em,
-            /* red 0,
-            red 1em, */ transparent 0,
+            transparent 0,
             transparent 2em,
-            /* #b67 0,
-            #b67 3em, */ tomato 0,
+            tomato 0,
             tomato 3em,
             transparent 0,
             transparent 4em
@@ -21,7 +19,6 @@
 
     max-width: 50em;
     background-color: green;
-    /* padding-bottom: 10em; */
 }
 
 .input {
@@ -36,8 +33,6 @@
 
 .label {
     display: inline-block;
-    /* background: green; */
-    /* height: 3em; */
     margin-bottom: 0.3em;
 }
 
